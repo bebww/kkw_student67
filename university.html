@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kkw_student67</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- header -->
+
+<div class="bg-gradient-to-t h-[100px] ">
+    <header class="bg-white ">
+        <nav class="flex items-center justify-between w-full mx-auto">
+            <div class="flex items-center">
+                <img class="w-[65px] cursor-pointer" src="pic/logo01.png" alt="...">
+                <p class="sm:text-[15px] ml-[20px] text-[12px]">Student Committee</p>
+            </div>
+            <div
+                class=" lg:mr-[-50%] mr-[-30%] nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[40vh] left-0 top-[-400%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 justify-between">
+                    <li>
+                        <a class="hover:text-gray-500" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="classSchedule.html">Class Schedule</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="university.html">University</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+</div>
+
+<script>
+    const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+</script>
+
+<!-- header -->
+
+
+<!-- tcas -->
+<div class="max-w-screen-xl mx-auto px-5 mt-10 sm:px-10 md:px-16">
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a href="https://www.mytcas.com/" class="font-semibold inline-block">TCAS</a>
+        </div>
+    </div>
+
+    <li>
+        <a href="https://www.mytcas.com/"
+        class="hover:text-indigo-600">
+            เกี่ยวกับ TCAS</a>
+        </li>
+    <li>
+        <a href="tcas_university.html"
+        class="hover:text-indigo-600">
+            อยากเข้าคณะนี้ ต้องสอบอะไรบ้าง???</a>
+        </li>
+    <li>
+        <a href="https://assets.mytcas.com/maxmin/TCAS66_maxmin.pdf"
+        class="hover:text-indigo-600">
+            สถิติคะแนน Max-Min 2566 </a>
+        </li>
+    <li>
+        <a href="university_web.html"
+        class="hover:text-indigo-600">
+            รวมเว็ปไซต์มหาวิทยาลัย</a>
+        </li>
+    <li>
+        <a href="#"
+        class="text-gray-400 hover:text-indigo-600 text-xs">
+            คลังข้อสอบ (ยังไม่เปิดใช้งาน) แต่กำลังจะมา จริง ๆ</a>
+        </li>
+</div>
+<!-- tcas -->
+
+<!-- exam -->
+<!-- <div class="max-w-screen-xl mx-auto px-5 mt-10 sm:px-10 md:px-16">
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a href="#" class="font-semibold inline-block">Exam</a>
+        </div>
+    </div>
+    <div class="justify-center gap-3 flex">
+        <div class="h-[20vh] w-[20vh] flex justify-center items-center hover:scale-90">
+            <a href="">
+                <img src="pic/pic_1.png" alt="math">
+            </a>
+        </div>
+        <div class="h-[20vh] w-[20vh] flex justify-center items-center hover:scale-90">
+            <a href="">
+                <img src="pic/pic_1.png" alt="chem">
+            </a>
+        </div>
+        <div class="h-[20vh] w-[20vh] flex justify-center items-center hover:scale-90">
+            <a href="">
+                <img src="pic/pic_1.png" alt="bio">
+            </a>
+        </div>
+        <div class="h-[20vh] w-[20vh] flex justify-center items-center hover:scale-90">
+            <a href="">
+                <img src="pic/pic_1.png" alt="physical">
+            </a>
+        </div>
+        
+    </div>
+</div> -->
+<!-- exam -->
+
+<!-- camp/activity -->
+<div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a href="camp.html" class="font-semibold inline-block">Camp / Activities</a>
+        </div>
+        <a href="camp.html">See All</a>
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+
+<!-- card -->
+
+<div class="rounded overflow-hidden shadow-lg flex flex-col">
+    <a href="https://www.facebook.com/share/p/vqgqy3SyuiYiPfuQ/"></a>
+    <div class="flex items-center bg-gray-200">
+        <img src="pic/tngia_logo.png" alt="" class="h-[75px] p-[10px]">
+        <p class="ml-[10px]">Thailand New Gen Inventors Award
+            </p>
+    </div>
+    <div class="relative"><a href="https://www.facebook.com/share/p/vqgqy3SyuiYiPfuQ/">
+            <img class="w-full"
+                src="pic/tngia.jpg"
+                alt="Sunset in the mountains">
+            <div
+                class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+            </div>
+        </a>
+        <a href="#!">
+            <!-- <div
+                class="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                Cooking
+            </div> -->
+        </a>
+    </div>
+    <div class="px-6 py-4 mb-auto">
+        <a href="https://www.facebook.com/share/p/vqgqy3SyuiYiPfuQ/"
+            class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+            Thailand New Gen Inventors Award</a>
+        <p class="text-gray-500 text-sm">
+            สำนักงานการวิจัยแห่งชาติ (วช.) กระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม
+<br> ขอเชิญนักเรียน นิสิต นักศึกษา เสนอผลงานสิ่งประดิษฐ์เข้าร่วมประกวดโครงการ Thailand New Gen Inventors Award 2025 ( I-New Gen Award 2025) ระดับมัธยมศึกษา ระดับอาชีวศึกษา และระดับอุดมศึกษา ใน 5 กลุ่มเรื่องการประกวด ดังนี้ 
+      <br>1. การเกษตร
+      <br>2. อาหาร
+      <br>3. สุขภาพและการแพทย์
+      <br>4. พลังงาน วัสดุ และเคมีชีวภาพ
+      <br>5. การท่องเที่ยว
+        </p>
+    </div>
+    <div class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+        <span href="https://www.facebook.com/share/p/vqgqy3SyuiYiPfuQ/" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+            <svg height="13px" width="13px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                xml:space="preserve">
+                <g>
+                    <g>
+                        <path
+                            d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <span class="ml-1">รับสมัคร - 15/08/2024</span>
+        </span>
+    </div>
+</div>
+
+
+<!-- card -->
+
+<div class="rounded overflow-hidden shadow-lg flex flex-col">
+    <a href="https://www.facebook.com/photo/?fbid=7855492587837225&set=a.274167319303161"></a>
+    <div class="flex items-center bg-gray-200">
+        <img src="pic/kku_logo2.png" alt="" class="h-[75px] p-[10px]">
+        <p class="ml-[10px]">kku_world
+            </p>
+    </div>
+    <div class="relative"><a href="https://www.facebook.com/photo/?fbid=7855492587837225&set=a.274167319303161">
+            <img class="w-full"
+                src="pic/kku_world.jpg"
+                alt="Sunset in the mountains">
+            <div
+                class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+            </div>
+        </a>
+        <a href="#!">
+            <!-- <div
+                class="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                Cooking
+            </div> -->
+        </a>
+    </div>
+    <div class="px-6 py-4 mb-auto">
+        <a href="https://www.facebook.com/photo/?fbid=7855492587837225&set=a.274167319303161"
+            class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+            หลักสูตรอบรมระยะสั้น "สีน้ำสร้างสุข"</a>
+        <p class="text-gray-500 text-sm">
+            ขอเชิญสมัครมาเรียนรู้ หลักสูตรอบรมระยะสั้น "สีน้ำสร้างสุข"
+            <br>โดย ผศ.ดร.พรณรงค์ ชาญนุวงศ์
+            <br> อาจารย์คณะสถาปัตยกรรมศาสตร์ มหาวิทยาลัยขอนแก่น
+            <br> วันเสาร์ที่ 17 สิงหาคม 2567 เริ่มเวลา 08.30-16.00 น.
+            <br> - ฝึกวาดสีน้ำพื้นฐาน : ทิวทัศน์ ดอกไม้ สถาปัตยกรรม (ไม่มีพื้นฐานก็ได้)
+            <br> - มีอาหารกลางวัน นั่งเขียนด้วยกันทั้งวัน
+            <br> - รับเกียรติบัตรรับรองการอบรมจากคณะฯ
+            <br> ค่าลงทะเบียน 1,199 บาท พร้อมอุปกรณ์
+            <br> สอบถามรายละเอียดได้ที่ : คุณพิมพ์ชนก โทรศัพท์ 083-1515454
+        </p>
+    </div>
+    <div class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+        <span href="https://www.facebook.com/photo/?fbid=7855492587837225&set=a.274167319303161" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+            <svg height="13px" width="13px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                xml:space="preserve">
+                <g>
+                    <g>
+                        <path
+                            d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <span class="ml-1">กิจกรรม 17/08/2024</span>
+        </span>
+    </div>
+</div>
+
+<!-- card -->
+
+<div class="rounded overflow-hidden shadow-lg flex flex-col">
+    <a href="https://www.facebook.com/share/p/pJhLH7dRqkU3VzFu/"></a>
+    <div class="flex items-center bg-gray-200">
+        <img src="pic/meddream_logo.jpg" alt="" class="h-[75px] p-[10px]">
+        <p class="ml-[10px]">Meddream
+            </p>
+    </div>
+    <div class="relative"><a href="https://www.facebook.com/share/p/pJhLH7dRqkU3VzFu/">
+            <img class="w-full"
+                src="pic/meddream.jpg"
+                alt="Sunset in the mountains">
+            <div
+                class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+            </div>
+        </a>
+        <a href="#!">
+            <!-- <div
+                class="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                Cooking
+            </div> -->
+        </a>
+    </div>
+    <div class="px-6 py-4 mb-auto">
+        <a href="https://www.facebook.com/share/p/pJhLH7dRqkU3VzFu/"
+            class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+            ค่ายฝันเป็นหมอขอได้ไหม</a>
+        <p class="text-gray-500 text-sm">
+MEDDREAM23📖📖
+<br>เคาะแล้ว‼️ “ค่ายฝันเป็นหมอขอได้ไหม ครั้งที่ 23”
+<br>จะจัดขึ้นในวันที่ 29 พฤศจิกายน - 1 ธันวาคมนี้
+<br>📌เปิดรับสมัครตั้งแต่วันที่ 16 สิงหาคมนี้เป็นต้นไป📚
+        </p>
+    </div>
+    <div class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
+        <span class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+            <svg height="13px" width="13px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                xml:space="preserve">
+                <g>
+                    <g>
+                        <path
+                            d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+            <span class="ml-1">รับสมัคร 16/08/2024 เป็นต้นไป</span>
+        </span>
+    </div>
+</div>
+
+
+
+<!-- //// -->
+</div>
+</div>
+<!-- camp/activity -->
+
+
+<!-- end -->
+<div class="box">
+    <div class="mt-[10vh] pl-[40px] p-[20px]">
+        <h2 class="md:text-xl text-base font-semibold bg-white">Contact Us</h2>
+        <h2 class="md:text-xl text-base bg-white">Student Committee 2567</h2>
+
+    <div class="pt-[20px] flex items-center">
+        <box-icon name='facebook-circle' type='logo' size='md' ></box-icon>
+        <a href="https://www.facebook.com/kkw.studentcouncil.official"
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">คณะกรรมการนักเรียนโรงเรียน <br> ขอนแก่นวิทยายน </a> 
+    </div>
+    <div class=" flex items-center mt-[10px]">
+        <box-icon type='logo' name='instagram' size='md'></box-icon>
+        <a href="https://www.instagram.com/kkw.student?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">kkw.student</a> 
+    </div>
+        
+    </div>
+</div>  
+    <script src="script.js"></script> 
+</body>
+</html>

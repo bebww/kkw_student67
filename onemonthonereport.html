@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+
+<div class="bg-gradient-to-t h-[100px] ">
+    <header class="bg-white ">
+        <nav class="flex items-center justify-between w-full mx-auto">
+            <div class="flex items-center">
+                <img class="w-[65px] cursor-pointer" src="pic/logo01.png" alt="...">
+                <p class="sm:text-[15px] ml-[20px] text-[12px]">Student Committee</p>
+            </div>
+            <div
+                class=" lg:mr-[-50%] mr-[-30%] nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[40vh] left-0 top-[-400%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 justify-between">
+                    <li>
+                        <a class="hover:text-gray-500" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="classSchedule.html">Class Schedule</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="university.html">University</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+</div>
+
+<script>
+    const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+</script>
+
+<!-- header -->
+<div class="max-w-screen-xl mx-auto px-5 mt-10 sm:px-10 md:px-16">
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a href="#" class="font-semibold inline-block">May 2024</a>
+        </div>
+    </div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/onemonere01.jpg" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            กิจกรรมปฐมนิเทศ ม.1</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/onemonere02.jpg" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            กิจกรรมปฐมนิเทศ ม.4</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/onemonere03.jpg" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            จับฉลากคณะสี ม.2 และ 3</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/onemonere04.jpg" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            จับฉลากคณะสี ม.5</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/onemonere05.jpg" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            Gift Angle Radio Campus Tour</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/onemonere06.jpg" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            พิธีลงนามถวายพระพร</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/onemonere07.jpg" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            วันงดสูบบุหรี่โลก</a>
+        </h2>
+    </div>
+</div>
+</div>
+
+<!-- header2 -->
+<div class="max-w-screen-xl mx-auto px-5 mt-10 sm:px-10 md:px-16">
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a href="#" class="font-semibold inline-block">June 2024</a>
+        </div>
+    </div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/june01.PNG" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            การศึกษาดูงานโรงเรียนศรีสงครามวิทยา</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/june02.PNG" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            พิธีไหว้ครู <br> ประจำปีการศึกษา 2567</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/june03.PNG" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            ฟุตบอลประเพณี <br> ขอนแก่นนคร ครั้งที่ 1</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/june04.PNG" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            ประชุมสภา ครั้งที่ 1</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/june05.PNG" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            อำนวยความสะดวก <br>Crystal School Tour</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/june06.PNG" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            ร่วมการอบรม <br> แพทย์ฉุกเฉินน้อยนักสื่อสาร</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/june07.PNG" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            ตรวจห้องเรียนสีขาว</a>
+        </h2>
+    </div>
+</div>
+</div>
+
+
+<!-- end -->
+<div class="box">
+    <div class="mt-[10vh] pl-[40px] p-[20px]">
+        <h2 class="md:text-xl text-base font-semibold bg-white">Contact Us</h2>
+        <h2 class="md:text-xl text-base bg-white">Student Committee 2567</h2>
+
+    <div class="pt-[20px] flex items-center">
+        <box-icon name='facebook-circle' type='logo' size='md' ></box-icon>
+        <a href="https://www.facebook.com/kkw.studentcouncil.official"
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">คณะกรรมการนักเรียนโรงเรียน <br> ขอนแก่นวิทยายน </a> 
+    </div>
+    <div class=" flex items-center mt-[10px]">
+        <box-icon type='logo' name='instagram' size='md'></box-icon>
+        <a href="https://www.instagram.com/kkw.student?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">kkw.student</a> 
+    </div>
+        
+    </div>
+</div>  
+    <script src="script.js"></script> 
+</body>
+</html>

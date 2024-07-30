@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kkw_student67</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- header -->
+
+<div class="bg-gradient-to-t h-[100px] ">
+    <header class="bg-white ">
+        <nav class="flex items-center justify-between w-full mx-auto">
+            <div class="flex items-center">
+                <img class="w-[65px] cursor-pointer" src="pic/logo01.png" alt="...">
+                <p class="sm:text-[15px] ml-[20px] text-[12px]">Student Committee</p>
+            </div>
+            <div
+                class=" lg:mr-[-50%] mr-[-30%] nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[40vh] left-0 top-[-400%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 justify-between">
+                    <li>
+                        <a class="hover:text-gray-500" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="classSchedule.html">Class Schedule</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="university.html">University</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+</div>
+
+<script>
+    const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+</script>
+
+<!-- content -->
+
+<div class="max-w-screen-xl mx-auto px-5 mt-10 sm:px-10 md:px-16">
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a class="font-semibold inline-block">KKW News</a>
+        </div>
+    </div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/vote00.png" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            สรุปผลการประชุมสภานักเรียน</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/kkw_facebook.png" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            ประกาศเปลี่ยนเพจ Facebook</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/pride.png" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            Happy PRIDE Month</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/kkw_card.png" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            ตารางถ่ายบัตรนักเรียน</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/rights.png" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            การเตรียมตัวรับสิทธิ์</a>
+        </h2>
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="pic/backtoschool.png" alt="">
+        <h2 class="flex justify-center py-2 text-gray-900 font-semibold">
+            Back To School</a>
+        </h2>
+    </div>
+</div>
+</div>
+
+<!-- vote -->
+<div class="max-w-screen-xl mx-auto px-5 mt-20 sm:px-10 md:px-16">
+
+    <div class="border-b mt-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a class="font-semibold inline-block">สรุปผลการประชุมสภานักเรียน ภาคเรียนที่ 1/2567</a>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote01.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">การพิจารณารับรองคณะกรรมการนักเรียน <span class="text-[#59FF00] font-bold"> รับรอง</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote02.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการให้ความรู้เข้าสู่รั่วมหาวิทยาลัย <span class="text-[#59FF00] font-bold"> เห็นด้วย</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote03.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการเก็บ เท บิด Shoot!<span class="text-[#59FF00] font-bold"> เห็นด้วย</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote04.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการผ้าอนามัย สบู่ และทิชชู่<span class="text-[#FF0000] font-bold">ไม่เห็นด้วย</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote05.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการการแข่งขันแบตมินตันดูโอ้ชาเลนจ์ต่อต้านยาเสพติด
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote06.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการแข่งขันวอลเลย์บอลต่อต้านยาเสพติด
+                    <h2 class="text-[#59FF00] font-bold text-xs"> เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote07.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการการแข่งขัน KKW football League ต่อต้านยาเสพติด
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote08.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการการแข่งขันตอบปัญหาวิชาการเนื่องในวันรพีและวันอาเซียนครั้งที่ 3
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote09.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการม.ปลายล่าฝัน (Catch the Dream)
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote10.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการแข่งขัน Basketball League KKW 3x3
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+        
+        </div>
+</div>
+
+<!-- end -->
+<div class="box">
+    <div class="mt-[10vh] pl-[40px] p-[20px]">
+        <h2 class="md:text-xl text-base font-semibold bg-white">Contact Us</h2>
+        <h2 class="md:text-xl text-base bg-white">Student Committee 2567</h2>
+
+    <div class="pt-[20px] flex items-center">
+        <box-icon name='facebook-circle' type='logo' size='md' ></box-icon>
+        <a href="https://www.facebook.com/kkw.studentcouncil.official"
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">คณะกรรมการนักเรียนโรงเรียน <br> ขอนแก่นวิทยายน </a> 
+    </div>
+    <div class=" flex items-center mt-[10px]">
+        <box-icon type='logo' name='instagram' size='md'></box-icon>
+        <a href="https://www.instagram.com/kkw.student?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">kkw.student</a> 
+    </div>
+        
+    </div>
+</div>    
+
+<script src="script.js"></script> 
+</body>
+</html>

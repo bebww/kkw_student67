@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kkw_student67</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- header -->
+    <!-- <div class="flex list-none justify-between bg-gray-500 font-medium ">
+        <div class="flex ml-[20px] items-center">
+            <img src="pic/logo01.png" alt="" class="w-[65px] p-[5px]">
+            <p class="ml-[5px] text-white">Student <br> Comitee 67</p>
+        </div>
+        <div class="flex items-center pr-[20px]">
+            <box-icon name='menu' color='#ffffff' ></box-icon>
+        </div>
+    </div> -->
+
+<!-- header -->
+
+
+<div class="bg-gradient-to-t h-[100px] ">
+    <header class="bg-white ">
+        <nav class="flex items-center justify-between w-full mx-auto">
+            <div class="flex items-center">
+                <img class="w-[65px] cursor-pointer" src="pic/logo01.png" alt="...">
+                <p class="sm:text-[15px] ml-[20px] text-[12px]">Student Committee</p>
+            </div>
+            <div
+                class=" lg:mr-[-50%] mr-[-30%] nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[40vh] left-0 top-[-400%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 justify-between">
+                    <li>
+                        <a class="hover:text-gray-500" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="classSchedule.html">Class Schedule</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="university.html">University</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="more.html">More</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+</div>
+
+<script>
+
+    const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+</script>
+  
+
+<!-- slide -->
+
+<div class="box">
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="pic/welcome_kkw.png" alt="">
+            </div>
+            <div class="item">
+                <img src="pic/hihi.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="pic/june00.PNG" alt="">
+            </div>
+            <div class="item">
+                <img src="pic/netsat_2.jpg" alt="">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // slider
+
+let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
+
+let lengthItems = items.length - 1;
+let active = 0;
+next.onclick = function(){
+    active = active + 1 <= lengthItems ? active + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    reloadSlider();
+}
+let refreshInterval = setInterval(()=> {next.click()}, 5000);
+function reloadSlider(){
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    last_active_dot.classList.remove('active');
+    dots[active].classList.add('active');
+
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 5000);
+
+    
+}
+
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active = key;
+         reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
+
+
+</script>
+<!-- slide -->
+
+<!-- countdown -->
+
+<div class="max-w-screen-xl mx-auto px-5 mt-20 sm:px-10 md:px-16">
+
+
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a href="#" class="font-semibold inline-block">Coming Soon</a>
+        </div>
+    </div>
+
+
+<div class=" grid cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5 mt-20 sm:px-10 md:px-16">
+
+    <!-- 1 -->
+    <div class="flex felx-col max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="pt-4 px-6">
+            <h2 class="text-xl font-bold text-gray-800">NETSAT 2/2567</h2>
+            <p class="mt-[5px]">03/08/2567</p>
+        </div>
+    <div>
+        <div class="py-4 px-6">
+            <div class="flex flex-wrap gap-3 justify-center items-center">
+                <div class="border rounded-lg px-4 py-2">
+                    <div id="days" class="font-bold text-2xl text-gray-800"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<!-- 2 -->
+    <div class="flex felx-col max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="pt-4 px-6">
+            <h2 class="text-xl font-bold text-gray-800">POSN</h2>
+            <p class="mt-[5px]">25/08/2024</p>
+        </div>
+    <div>
+        <div class="py-4 px-6">
+            <div class="flex flex-wrap gap-3 justify-center items-center">
+                <div class="border rounded-lg px-4 py-2">
+                    <div id="days2" class="font-bold text-2xl text-gray-800"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<!-- 3 -->
+    <!-- <div class="flex felx-col max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="pt-4 px-6">
+            <h2 class="text-xl font-bold text-gray-800">.....</h2>
+            <p class="mt-[5px]">date</p>
+        </div>
+    <div>
+        <div class="py-4 px-6">
+            <div class="flex flex-wrap gap-3 justify-center items-center">
+                <div class="border rounded-lg px-4 py-2">
+                    <div id="days3" class="font-bold text-2xl text-gray-800"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> -->
+
+
+</div>
+
+</div>
+
+<script>
+    
+ // Set the date we're counting down to
+ var countDownDate = new Date("Aug 3, 2024 00:00:00").getTime();
+ var countDownDate2 = new Date("Aug 25, 2024 00:00:00").getTime();
+ var countDownDate3 = new Date("").getTime();
+
+ // Update the countdown every 1 second
+ var x = setInterval(function() {
+
+     // Get today's date and time
+     var now = new Date().getTime();
+
+     // Find the distance between now and the count down date
+     var distance = countDownDate - now;
+     var distance2 = countDownDate2 - now;
+     var distance3 = countDownDate3 - now;
+
+     // Time calculations for days, hours, minutes and seconds
+     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+     var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+    //  var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\
+
+     var days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+    //  var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+     // Display the result in the corresponding elements
+     document.getElementById("days").textContent = days + " " + "days";
+    //  document.getElementById("hours").textContent = hours + " " + "h";
+     
+     document.getElementById("days2").textContent = days2 + " " + "days";
+    //  document.getElementById("hours2").textContent = hours2 + " " + "h";
+
+     document.getElementById("days3").textContent = days3 + " " + "days";
+    //  document.getElementById("hours3").textContent = hours3 + " " + "h";
+
+
+     // If the count down is over, write some text 
+     if (distance < 0) {
+         clearInterval(x);
+         document.getElementById("countdown").innerHTML = "EXPIRED";
+     }
+     else if (distance2 < 0) {
+        clearInterval(x);
+         document.getElementById("countdown").innerHTML = "EXPIRED";
+     }
+     else if (distance3 < 0) {
+        clearInterval(x);
+         document.getElementById("countdown").innerHTML = "EXPIRED";
+     }
+     
+ }, 1000);
+
+</script>
+<!-- countdown -->
+
+<!-- football -->
+
+<div class="max-w-screen-xl mx-auto px-5 mt-10 sm:px-10 md:px-16">
+    <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a class="font-semibold inline-block">Football League</a>
+        </div>
+    </div>
+
+<div class="mx-[10%] sm:mx-[20%] py-5 sm:py-10 md:py-16 max-h-xl flex justify-center items-center">
+        <img class="h-auto max-w-full" src="pic/challenge ผล.png.png" alt="">
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div>
+        <img class="h-auto max-w-full" src="pic/challenge ผล - 1.png" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full" src="pic/challenge ผล - 2.png" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full" src="pic/challenge ผล - 3.png" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full" src="pic/challenge ผล - 4.png" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full" src="pic/challenge ผล - 5.png" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full" src="pic/challenge ผล - 6.png" alt="">
+    </div>
+</div>
+    <a class="flex justify-center text-indigo-600 mt-10"
+    href="ยังไม่ใส่ลิ้งงับอ้วง">
+        < รูปภาพกิจกรรม >
+    </a>
+</div>
+
+
+
+<!-- content -->
+<div class="max-w-screen-xl mx-auto px-5 mt-20 sm:px-10 md:px-16">
+
+    <div class="border-b mt-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a class="font-semibold inline-block">KKW News</a>
+        </div>
+        <a href="news.html">See All</a>
+    </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+    <div class="grid grid-cols-1 sm:grid-cols-12 gap-5">
+
+        <div class="sm:col-span-5">
+            <a>
+                <div class="bg-cover text-center overflow-hidden"
+                    style="min-height: 300px; background-image:url('pic/vote00.png')"
+                    title="">
+                </div>
+            </a>
+            <div
+                class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+                <div class="">
+                    <div class="flex items-center bg-gray-200">
+                        <img src="pic/logo01.png" alt="" class="w-[65px] p-[10px]">
+                        <p class="ml-[5px]">คณะกรรมการนักเรียน</p>
+                    </div>
+                    <a
+                        class="block text-gray-900 font-bold text-2xl mb-[10px] mt-[10px] hover:text-indigo-600 transition duration-500 ease-in-out">สรุปผลการประชุมสภานักเรียน</a>
+                    <p class="text-gray-700 text-base mt-2">สรุปผลการประชุมสภานักเรียน ภาคเรียนที่ 1 <br>ปีการศึกษา 2567</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="sm:col-span-7 grid grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="">
+                <a>
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/kkw_facebook.png')">
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61560253896474&paipv=0&eav=AfYCNOKRklfrcjm0tK4acFBeNpFk2178r9-miFfMhMpIv46Ltcgrs0hTYVNqnwykABc&_rdr"
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    ประกาศเปลี่ยนเพจ Facebook</a>
+            </div>
+
+            <div class="">
+                <a>
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/pride.png')">
+                    </div>
+                </a>
+                <a
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    Happy PRIDE Month</a>
+            </div>
+
+            <div class="">
+                <a>
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/kkw_card.png')">
+                    </div>
+                </a>
+                <a
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    ตารางถ่ายบัตรนักเรียน</a>
+            </div>
+            
+            <div class="">
+                <a>
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/rights.png')"   >
+                    </div>
+                </a>
+                <a
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    การเตรียมตัวรับสิทธิ์</a>
+            </div>
+            <!-- <div class="">
+                <a href="#">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/pic_1.png')">
+                    </div>
+                </a>
+                <a href="#"
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">Survey:
+                    Lorem ipsum dolor sit amet.</a>
+            </div>
+            <div class="">
+                <a href="#">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/pic_1.png')">
+                    </div>
+                </a>
+                <a href="#"
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">Trump
+                    Lorem ipsum dolor sit amet.</a>
+            </div> -->
+        </div>
+
+    </div>
+</div>
+
+<!-- vote -->
+<!-- <div class="max-w-screen-xl mx-auto px-5 mt-20 sm:px-10 md:px-16">
+
+    <div class="border-b mt-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a class="font-semibold inline-block">สรุปผลการประชุมสภานักเรียน ภาคเรียนที่ 1/2567</a>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote01.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">การพิจารณารับรองคณะกรรมการนักเรียน <span class="text-[#59FF00] font-bold"> รับรอง</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote02.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการให้ความรู้เข้าสู่รั่วมหาวิทยาลัย <span class="text-[#59FF00] font-bold"> เห็นด้วย</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote03.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการเก็บ เท บิด Shoot!<span class="text-[#59FF00] font-bold"> เห็นด้วย</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote04.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการผ้าอนามัย สบู่ และทิชชู่<span class="text-[#FF0000] font-bold">ไม่เห็นด้วย</span></h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote05.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการการแข่งขันแบตมินตันดูโอ้ชาเลนจ์ต่อต้านยาเสพติด
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote06.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการแข่งขันวอลเลย์บอลต่อต้านยาเสพติด
+                    <h2 class="text-[#59FF00] font-bold text-xs"> เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote07.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการการแข่งขัน KKW football League ต่อต้านยาเสพติด
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote08.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการการแข่งขันตอบปัญหาวิชาการเนื่องในวันรพีและวันอาเซียนครั้งที่ 3
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote09.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการม.ปลายล่าฝัน (Catch the Dream)
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="pic/vote10.jpg" alt="Gallery image" />
+                <h2 class="text-xs flex justify-center">โครงการแข่งขัน Basketball League KKW 3x3
+                    <h2 class="text-[#59FF00] font-bold text-xs ">เห็นด้วย</h2>
+            </div>
+        
+        </div>
+</div> -->
+
+<!-- onemonthonereport -->
+
+<div class="max-w-screen-xl mx-auto px-5 mt-20 sm:px-10 md:px-16">
+
+    <div class="border-b mt-5 flex justify-between text-sm">
+        <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+            <a href="#" class="font-semibold inline-block">One Month One Report</a>
+        </div>
+        <a href="onemonthonereport.html">See All</a>
+    </div>
+</div>
+
+<!-- slide2 -->
+<div class="pt-10">
+<div class="box2">
+    <div class="slider2">
+        <div class="list2">
+            <div class="item2">
+                <img src="pic/june00.PNG" alt="">
+            </div>
+            <div class="item2">
+                <img src="pic/june01.PNG" alt="">
+            </div>
+            <div class="item2">
+                <img src="pic/june02.PNG" alt="">
+            </div>
+            <div class="item2">
+                <img src="pic/june03.PNG" alt="">
+            </div>
+            <div class="item2">
+                <img src="pic/june04.PNG" alt="">
+            </div>
+            <div class="item2">
+                <img src="pic/june05.PNG" alt="">
+            </div>
+            <div class="item2">
+                <img src="pic/june06.PNG" alt="">
+            </div>
+            <div class="item2">
+                <img src="pic/june07.PNG" alt="">
+            </div>
+        </div>
+        <div class="buttons2">
+            <button id="prev2"><</button>
+            <button id="next2">></button>
+        </div>
+        <ul class="dots2">
+            <li class="active2"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+</div>
+<!-- slide2 -->
+
+<style>
+    .box2 {
+    height: 350px;
+    /* background-color: rgb(219, 219, 219); */
+    /* background-image: url(pic/bg01.png); */
+    display: flex;
+    align-items: center;
+}
+
+.slider2{
+    width: 320px;
+    max-width: 100vw;
+    height: 320px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    
+}
+.slider2 .list2{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+    
+}
+.slider2 .list2 img{
+    width: 320px;
+    max-width: 100vw;
+    height: 320px;
+    object-fit: cover;
+}
+.slider2 .buttons2{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider2 .buttons2 button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider2 .dots2{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider2 .dots2 li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider2 .dots2 li.active2{
+    width: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .slider2{
+        height: 270px;
+        width: 270px;
+    }
+    .box2 {
+        height: 270px;
+    }
+    .slider2 .list2 img{
+        width: 270px;
+        max-width: 100vw;
+        height: 270px;
+        object-fit: cover;
+    }
+}
+
+</style>
+
+<script>
+    // slider
+
+let slider2 = document.querySelector('.slider2 .list2');
+let items2 = document.querySelectorAll('.slider2 .list2 .item2');
+let next2 = document.getElementById('next2');
+let prev2 = document.getElementById('prev2');
+let dots2 = document.querySelectorAll('.slider2 .dots2 li');
+
+let lengthItems2 = items2.length - 1;
+let active2 = 0;
+next2.onclick = function(){
+    active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
+    reloadSlider2();
+}
+prev2.onclick = function(){
+    active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
+    reloadSlider2();
+}
+let refreshInterval2 = setInterval(()=> {next2.click()}, 3000);
+function reloadSlider2(){
+    slider2.style.left = -items2[active2].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider2 .dots2 li.active2');
+    last_active_dot.classList.remove('active2');
+    dots2[active2].classList.add('active2');
+
+    clearInterval(refreshInterval2);
+    refreshInterval2 = setInterval(()=> {next2.click()}, 3000);
+
+    
+}
+
+dots2.forEach((li, key2) => {
+    li.addEventListener('click', ()=>{
+         active2 = key2;
+         reloadSlider2();
+    })
+})
+window2.onresize2 = function(event) {
+    reloadSlider2();
+};
+
+</script>
+
+<div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+    <div class="grid grid-cols-1 sm:grid-cols-12 gap-5">
+
+        <div class="sm:col-span-5">
+            <a href="#">
+                <div class="bg-cover text-center overflow-hidden"
+                    style="min-height: 300px; background-image: url('pic/june00.PNG')"
+                    title="">
+                </div>
+            </a>
+            <div
+                class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+                <div class="">
+                    <div class="flex items-center bg-gray-200">
+                        <img src="pic/logo01.png" alt="" class="w-[65px] p-[10px]">
+                        <p class="ml-[10px]">Student Committee</p>
+                    </div>
+                    <a href="#"
+                        class="block text-gray-900 font-bold text-2xl mb-[10px] mt-[10px] hover:text-indigo-600 transition duration-500 ease-in-out">สรุปผลการดำเนินงาน</a>
+                    <p class="text-gray-700 text-base mt-2">สรุปผลการดำเนินงานคณะกรรมการนักเรียน <br>ประจำเดือนมิถุนายน 2567</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:col-span-7 grid grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/june01.PNG')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    การศึกษาดูงานโรงเรียนศรีสงครามวิทยา</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/june02.PNG')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    พิธีไหว้ครู <br> ประจำปีการศึกษา 2567</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/june03.PNG')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    ฟุตบอลประเพณี <br> ขอนแก่นนคร ครั้งที่ 1</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/june04.PNG')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    ประชุมสภา ครั้งที่ 1</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/june05.PNG')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    อำนวยความสะดวก <br>Crystal School Tour</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/june06.PNG')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                   ร่วมการอบรม <br> แพทย์ฉุกเฉินน้อยนักสื่อสาร</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/june07.PNG')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                ตรวจห้องเรียนสีขาว</a>
+            </div>
+        </div>
+
+    </div>
+    <a class="flex justify-center text-indigo-600 mt-20"
+    href="https://forms.gle/quZ4V3xjfgPqDYXw8">
+        < แบบสอบถาม/ประเมิน การดำเนินงานของ คณะกรรมการนักเรียนประจำปีการศึกษา 2567 >
+    </a>
+</div>
+
+<!-- end -->
+<div class="box">
+    <div class="mt-[10vh] pl-[40px] p-[20px]">
+        <h2 class="md:text-xl text-base font-semibold bg-white">Contact Us</h2>
+        <h2 class="md:text-xl text-base bg-white">Student Committee 2567</h2>
+
+    <div class="pt-[20px] flex items-center">
+        <box-icon name='facebook-circle' type='logo' size='md' ></box-icon>
+        <a href="https://www.facebook.com/kkw.studentcouncil.official"
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">คณะกรรมการนักเรียนโรงเรียน <br> ขอนแก่นวิทยายน </a> 
+    </div>
+    <div class=" flex items-center mt-[10px]">
+        <box-icon type='logo' name='instagram' size='md'></box-icon>
+        <a href="https://www.instagram.com/kkw.student?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="pl-[10px] font-semibold md:text-xl text-base bg-white pr-[30px]">kkw.student</a> 
+    </div>
+        
+    </div>
+</div>    
+
+<script src="script.js"></script> 
+</body>
+</html>

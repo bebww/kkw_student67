@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+</head>
+<body>
+
+
+<!-- slide2 -->
+<div class="pt-10">
+  <div class="box2">
+      <div class="slider2">
+          <div class="list2">
+              <div class="item2">
+                  <img src="pic/onemonere00.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere01.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere02.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere03.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere04.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere05.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere06.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere07.jpg" alt="">
+              </div>
+          </div>
+          <div class="buttons2">
+              <button id="prev2"><</button>
+              <button id="next2">></button>
+          </div>
+          <ul class="dots2">
+              <li class="active2"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+  </div>
+  </div>
+  <!-- slide2 -->
+  
+  <style>
+      .box2 {
+      height: 350px;
+      /* background-color: rgb(219, 219, 219); */
+      /* background-image: url(pic/bg01.png); */
+      display: flex;
+      align-items: center;
+  }
+  
+  .slider2{
+      width: 320px;
+      max-width: 100vw;
+      height: 320px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      
+  }
+  .slider2 .list2{
+      position: absolute;
+      width: max-content;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      transition: 1s;
+      
+  }
+  .slider2 .list2 img{
+      width: 320px;
+      max-width: 100vw;
+      height: 320px;
+      object-fit: cover;
+  }
+  .slider2 .buttons2{
+      position: absolute;
+      top: 45%;
+      left: 5%;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+  }
+  .slider2 .buttons2 button{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff5;
+      color: #fff;
+      border: none;
+      font-family: monospace;
+      font-weight: bold;
+  }
+  .slider2 .dots2{
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      color: #fff;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
+  .slider2 .dots2 li{
+      list-style: none;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      margin: 10px;
+      border-radius: 20px;
+      transition: 0.5s;
+  }
+  .slider2 .dots2 li.active2{
+      width: 30px;
+  }
+  
+  @media screen and (max-width: 768px){
+      .slider2{
+          height: 270px;
+          width: 270px;
+      }
+      .box2 {
+          height: 270px;
+      }
+      .slider2 .list2 img{
+          width: 270px;
+          max-width: 100vw;
+          height: 270px;
+          object-fit: cover;
+      }
+  }
+  
+  </style>
+  
+  <script>
+      // slider
+  
+  let slider2 = document.querySelector('.slider2 .list2');
+  let items2 = document.querySelectorAll('.slider2 .list2 .item2');
+  let next2 = document.getElementById('next2');
+  let prev2 = document.getElementById('prev2');
+  let dots2 = document.querySelectorAll('.slider2 .dots2 li');
+  
+  let lengthItems2 = items2.length - 1;
+  let active2 = 0;
+  next2.onclick = function(){
+      active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
+      reloadSlider2();
+  }
+  prev2.onclick = function(){
+      active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
+      reloadSlider2();
+  }
+  let refreshInterval2 = setInterval(()=> {next2.click()}, 3000);
+  function reloadSlider2(){
+      slider2.style.left = -items2[active2].offsetLeft + 'px';
+      // 
+      let last_active_dot = document.querySelector('.slider2 .dots2 li.active2');
+      last_active_dot.classList.remove('active2');
+      dots2[active2].classList.add('active2');
+  
+      clearInterval(refreshInterval2);
+      refreshInterval2 = setInterval(()=> {next2.click()}, 3000);
+  
+      
+  }
+  
+  dots2.forEach((li, key2) => {
+      li.addEventListener('click', ()=>{
+           active2 = key2;
+           reloadSlider2();
+      })
+  })
+  window2.onresize2 = function(event) {
+      reloadSlider2();
+  };
+  
+  </script>
+  
+  <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+      <div class="grid grid-cols-1 sm:grid-cols-12 gap-5">
+  
+          <div class="sm:col-span-5">
+              <div class="pt-10">
+  <div class="box2">
+      <div class="slider2">
+          <div class="list2">
+              <div class="item2">
+                  <img src="pic/onemonere00.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere01.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere02.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere03.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere04.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere05.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere06.jpg" alt="">
+              </div>
+              <div class="item2">
+                  <img src="pic/onemonere07.jpg" alt="">
+              </div>
+          </div>
+          <div class="buttons2">
+              <button id="prev2"><</button>
+              <button id="next2">></button>
+          </div>
+          <ul class="dots2">
+              <li class="active2"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+  </div>
+  </div>
+          </div>
+  
+          <div class="sm:col-span-7 grid grid-cols-2 lg:grid-cols-3 gap-5">
+              <div class="">
+                  <a href="">
+                      <div class="h-40 bg-cover text-center overflow-hidden"
+                          style="background-image: url('pic/onemonere01.jpg')">
+                      </div>
+                  </a>
+                  <a href=""
+                      class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                      กิจกรรมปฐมนิเทศ ม.1</a>
+              </div>
+              <div class="">
+                  <a href="">
+                      <div class="h-40 bg-cover text-center overflow-hidden"
+                          style="background-image: url('pic/onemonere02.jpg')">
+                      </div>
+                  </a>
+                  <a href=""
+                      class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                      กิจกรรมปฐมนิเทศ ม.4</a>
+              </div>
+              <div class="">
+                  <a href="">
+                      <div class="h-40 bg-cover text-center overflow-hidden"
+                          style="background-image: url('pic/onemonere03.jpg')">
+                      </div>
+                  </a>
+                  <a href=""
+                      class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                      จับฉลากคณะสี ม.2,3</a>
+              </div>
+              <div class="">
+                  <a href="">
+                      <div class="h-40 bg-cover text-center overflow-hidden"
+                          style="background-image: url('pic/onemonere04.jpg')">
+                      </div>
+                  </a>
+                  <a href=""
+                      class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                      จับฉลากคณะสี ม.2,5</a>
+              </div>
+              <div class="">
+                  <a href="">
+                      <div class="h-40 bg-cover text-center overflow-hidden"
+                          style="background-image: url('pic/onemonere05.jpg')">
+                      </div>
+                  </a>
+                  <a href=""
+                      class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                      Gift Angle Radio <br>Campus Tour</a>
+              </div>
+              <div class="">
+                  <a href="">
+                      <div class="h-40 bg-cover text-center overflow-hidden"
+                          style="background-image: url('pic/onemonere06.jpg')">
+                      </div>
+                  </a>
+                  <a href=""
+                      class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                     พิธีลงนามถวายพระพร</a>
+              </div>
+              <div class="">
+                  <a href="">
+                      <div class="h-40 bg-cover text-center overflow-hidden"
+                          style="background-image: url('pic/onemonere07.jpg')">
+                      </div>
+                  </a>
+                  <a href=""
+                      class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                  วันงดสูบบุหรี่โลก</a>
+              </div>
+          </div>
+  
+      </div>
+  </div>
+
+
+
+<div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-5">
+
+<div class="sm:col-span-5">
+    <div class="h-[350px] flex items-center">
+        <div class="w-[320px] max-w-[100vw] h-[320px] m-auto relative overflow-hidden">
+            <div class="absolute max-w-max h-[100%] left-0 top-0 flex">
+                    <img class="w-[320] max-w-[100vw] h-[320px] cover" src="pic/challenge ผล.png.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="sm:col-span-6 grid grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="">
+                <a href="">
+                    <div class="h-full w-auto bg-cover overflow-hidden"
+                        style="background-image: url('pic/challenge\ ผล\ -\ 1.png')">
+                    </div>
+                </a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/onemonere01.jpg')">
+                    </div>
+                </a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/onemonere03.jpg')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    จับฉลากคณะสี ม.2,3</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/onemonere04.jpg')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    จับฉลากคณะสี ม.2,5</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/onemonere05.jpg')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                    Gift Angle Radio <br>Campus Tour</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/onemonere06.jpg')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                   พิธีลงนามถวายพระพร</a>
+            </div>
+            <div class="">
+                <a href="">
+                    <div class="h-40 bg-cover text-center overflow-hidden"
+                        style="background-image: url('pic/onemonere07.jpg')">
+                    </div>
+                </a>
+                <a href=""
+                    class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                วันงดสูบบุหรี่โลก</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+  
+</body>
+</html>
